@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --accent: #1b7b8c;
+  --heading: #111111;
+  --body-text: #333333;
+  --meta: #666666;
+  --bg: #ffffff;
+  --bg-alt: #f7f7f7;
+  --border: #e5e5e5;
+}
+
+@theme inline {
+  --color-accent: var(--accent);
+  --color-heading: var(--heading);
+  --color-body: var(--body-text);
+  --color-meta: var(--meta);
+  --color-bg: var(--bg);
+  --color-bg-alt: var(--bg-alt);
+  --color-border: var(--border);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-body);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/*
+  Type scale. Semantic tags (h1/h2/h3) get default styling so any
+  heading anywhere on the site follows the scale automatically.
+  The .h1/.h2/.h3/.body-lg/.body/.caption classes exist for elements
+  (e.g. a styled <span> or <div>) that need the same look but can't
+  use the semantic tag.
+*/
+@layer base {
+  h1,
+  .h1 {
+    font-size: clamp(2.5rem, 2.1rem + 1.5vw, 3rem); /* 40-48px */
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--color-heading);
+  }
+
+  h2,
+  .h2 {
+    font-size: clamp(1.75rem, 1.6rem + 0.6vw, 2rem); /* 28-32px */
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-heading);
+  }
+
+  h3,
+  .h3 {
+    font-size: clamp(1.25rem, 1.2rem + 0.2vw, 1.375rem); /* 20-22px */
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--color-heading);
+  }
+
+  .body-lg {
+    font-size: clamp(1.125rem, 1.05rem + 0.3vw, 1.25rem); /* 18-20px */
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-body);
+  }
+
+  p,
+  .body {
+    font-size: 1rem; /* 16px */
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-body);
+  }
+
+  .caption {
+    font-size: clamp(0.8125rem, 0.8rem + 0.1vw, 0.875rem); /* 13-14px */
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--color-meta);
+  }
+
+  a {
+    color: var(--color-accent);
+  }
+}
