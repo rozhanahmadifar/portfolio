@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function Projects() {
   return (
-    <section className="mx-auto max-w-5xl px-6 md:px-8 py-16">
+    <section className="mx-auto max-w-6xl px-10 md:px-14 py-16">
       <div className="text-center">
         <h1>Projects</h1>
         <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-accent-secondary" />

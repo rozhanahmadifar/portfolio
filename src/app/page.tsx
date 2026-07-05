@@ -4,7 +4,7 @@ import { projects } from "@/data/projects";
 export default function Home() {
   return (
     <>
-      <section className="mx-auto max-w-6xl px-6 md:px-8 py-16">
+      <section className="mx-auto max-w-7xl px-10 md:px-14 py-16">
         <div className="rounded-lg border border-border bg-bg-alt p-8 md:p-12">
           <div className="flex flex-col md:flex-row md:items-stretch gap-12 md:gap-16">
             <div className="flex flex-1 flex-col justify-center">
@@ -32,7 +32,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 md:px-8 py-20">
+      <section className="mx-auto max-w-6xl px-10 md:px-14 py-20">
         <div className="text-center">
           <h2>Projects</h2>
           <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-accent-secondary" />

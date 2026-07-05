@@ -22,7 +22,7 @@ const experience = [
 
 export default function About() {
   return (
-    <section className="mx-auto max-w-3xl px-6 md:px-8 py-16">
+    <section className="mx-auto max-w-3xl px-10 md:px-14 py-16">
       <p className="caption">About</p>
       <h1 className="mt-4">Jane Doe</h1>
       <p className="body-lg mt-6">

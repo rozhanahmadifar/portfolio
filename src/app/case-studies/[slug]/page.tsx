@@ -18,7 +18,7 @@ export default async function ProjectCaseStudyPlaceholder({
   }
 
   return (
-    <section className="mx-auto max-w-3xl px-6 md:px-8 py-16">
+    <section className="mx-auto max-w-3xl px-10 md:px-14 py-16">
       <p className="!text-meta">{project.subtitle}</p>
       <h1 className="mt-4">{project.title}</h1>
       <p className="body-lg mt-6">{project.description}</p>

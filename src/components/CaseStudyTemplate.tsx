@@ -38,7 +38,7 @@ export default function CaseStudyTemplate({
   return (
     <article>
       {/* Hero */}
-      <section className="mx-auto max-w-3xl px-6 md:px-8 py-16">
+      <section className="mx-auto max-w-3xl px-10 md:px-14 py-16">
         <h1>{title}</h1>
         <p className="body-lg mt-6">{intro}</p>
         {prototypeLink && (
@@ -55,7 +55,7 @@ export default function CaseStudyTemplate({
 
       {/* Result / Impact */}
       <section className="bg-bg-alt border-y border-border">
-        <div className="mx-auto max-w-3xl px-6 md:px-8 py-12 md:py-16">
+        <div className="mx-auto max-w-3xl px-10 md:px-14 py-12 md:py-16">
           <p className="caption">{resultsLabel}</p>
           <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-8">
             {results.map((metric) => (
@@ -71,7 +71,7 @@ export default function CaseStudyTemplate({
       </section>
 
       {/* Process: Discover / Define / Develop / Deliver */}
-      <section className="mx-auto max-w-3xl px-6 md:px-8 py-16 space-y-16">
+      <section className="mx-auto max-w-3xl px-10 md:px-14 py-16 space-y-16">
         {process.map((section) => (
           <div key={section.heading}>
             <h2>{section.heading}</h2>
@@ -89,7 +89,7 @@ export default function CaseStudyTemplate({
 
       {/* Reflection */}
       <section className="border-t border-border">
-        <div className="mx-auto max-w-3xl px-6 md:px-8 py-16">
+        <div className="mx-auto max-w-3xl px-10 md:px-14 py-16">
           <h2>Reflection</h2>
           <div className="body-lg mt-6">{reflection}</div>
         </div>
