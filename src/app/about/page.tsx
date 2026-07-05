@@ -6,17 +6,17 @@ const experience = [
   {
     role: "Senior Product Designer",
     org: "Acme Co.",
-    period: "2022 — Present",
+    period: "2022 to Present",
   },
   {
     role: "Product Designer",
     org: "Northwind Studio",
-    period: "2019 — 2022",
+    period: "2019 to 2022",
   },
   {
     role: "UX Designer",
     org: "Contoso",
-    period: "2017 — 2019",
+    period: "2017 to 2019",
   },
 ];
 
@@ -34,9 +34,8 @@ export default function About() {
       </p>
       <p className="mt-6">
         Outside of client work, I mentor early-career designers and write
-        about design process. I believe good design is mostly good listening
-        &mdash; to users, to constraints, and to the people building alongside
-        you.
+        about design process. I believe good design is mostly good listening,
+        to users, to constraints, and to the people building alongside you.
       </p>
 
       <h2 className="mt-16">Experience</h2>

@@ -100,8 +100,8 @@ export default function ExampleProjectCaseStudy() {
       reflection={
         <p>
           The biggest lesson was that the analytics told us where users
-          dropped off, but not why &mdash; that only came from talking to
-          people directly. Given more time, I&apos;d want to instrument the
+          dropped off, but not why: that only came from talking to people
+          directly. Given more time, I&apos;d want to instrument the
           smart-defaults flow more closely to see which deferred settings
           users come back to configure, and when.
         </p>

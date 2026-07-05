@@ -1,17 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --accent: #1b7b8c;
-  --heading: #111111;
+  --accent: #2d6cdf;
+  --accent-secondary: #7c5cfc;
+  --heading: #1c1c28;
   --body-text: #333333;
   --meta: #666666;
   --bg: #ffffff;
-  --bg-alt: #f7f7f7;
-  --border: #e5e5e5;
+  --bg-alt: #f0f3ff;
+  --border: #e5e8f5;
 }
 
 @theme inline {
   --color-accent: var(--accent);
+  --color-accent-secondary: var(--accent-secondary);
   --color-heading: var(--heading);
   --color-body: var(--body-text);
   --color-meta: var(--meta);
@@ -19,6 +21,8 @@
   --color-bg-alt: var(--bg-alt);
   --color-border: var(--border);
   --font-sans: var(--font-inter);
+  /* Shared corner radius: use rounded-lg everywhere for a consistent 14px. */
+  --radius-lg: 0.875rem;
 }
 
 body {

@@ -1,72 +1,52 @@
-import Link from "next/link";
-
-const highlights = [
-  { value: "6+", label: "Years designing digital products" },
-  { value: "20+", label: "Shipped case studies" },
-  { value: "4", label: "Industries worked in" },
-];
+import ProjectCard from "@/components/ProjectCard";
+import { projects } from "@/data/projects";
 
 export default function Home() {
   return (
     <>
-      <section className="mx-auto max-w-5xl px-6 md:px-8 py-16">
-        <p className="caption">Product Designer</p>
-        <h1 className="mt-4 max-w-2xl">
-          I design clear, considered products from research to pixels.
-        </h1>
-        <p className="body-lg mt-6 max-w-2xl">
-          I&apos;m Jane Doe, a product designer who partners with teams to turn
-          ambiguous problems into shipped, measurable outcomes. Below are a
-          few selected case studies that walk through the process.
-        </p>
-        <div className="mt-8 flex flex-wrap gap-8">
-          <Link
-            href="/case-studies/example-project"
-            className="body font-semibold no-underline hover:underline"
-          >
-            View a case study &rarr;
-          </Link>
-          <Link
-            href="/about"
-            className="body font-semibold !text-heading no-underline hover:!text-accent"
-          >
-            More about me
-          </Link>
-        </div>
-      </section>
-
-      <section className="bg-bg-alt border-y border-border">
-        <div className="mx-auto max-w-5xl px-6 md:px-8 py-12 md:py-16">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-            {highlights.map((item) => (
-              <div key={item.label}>
-                <div className="text-accent font-bold text-4xl md:text-5xl">
-                  {item.value}
-                </div>
-                <p className="caption mt-2">{item.label}</p>
+      <section className="mx-auto max-w-6xl px-6 md:px-8 py-16">
+        <div className="rounded-lg border border-border bg-bg-alt p-8 md:p-12">
+          <div className="flex flex-col md:flex-row md:items-stretch gap-12 md:gap-16">
+            <div className="flex flex-1 flex-col justify-center">
+              <h1 className="!text-heading">Rozhan Ahmadifar</h1>
+              <p className="mt-3 font-semibold !text-accent">
+                Product Designer | User Experience Design
+              </p>
+              <p className="body-lg mt-6">
+                I&apos;m Rozhan, a Product Designer with a background in
+                Interaction Design. Strong in user research, accessibility,
+                and design systems, with hands-on experience across the full
+                design process: interaction design, visual UI, prototyping,
+                and developer handoff, most recently within fintech. Lately,
+                I&apos;ve been focused on AI products, designing experiences
+                that are useful, trustworthy, and easy to act on with
+                confidence.
+              </p>
+            </div>
+            <div className="flex flex-1">
+              <div className="flex w-full items-center justify-center rounded-lg border-2 border-[#dce4fa] bg-white">
+                <span className="h1 !text-accent">RA</span>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 md:px-8 py-16">
-        <h2>Selected work</h2>
-        <div className="mt-8 border-t border-border">
-          <Link
-            href="/case-studies/example-project"
-            className="group flex items-center justify-between gap-8 py-6 border-b border-border no-underline"
-          >
-            <div>
-              <h3 className="!text-heading group-hover:!text-accent">
-                Example Project
-              </h3>
-              <p className="caption mt-2">
-                Redesigning an onboarding flow to reduce drop-off
-              </p>
-            </div>
-            <span className="text-accent font-semibold">&rarr;</span>
-          </Link>
+      <section className="mx-auto max-w-5xl px-6 md:px-8 py-20">
+        <div className="text-center">
+          <h2>Projects</h2>
+          <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-accent-secondary" />
+        </div>
+        <div className="mt-12 space-y-8">
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.slug}
+              title={project.title}
+              subtitle={project.subtitle}
+              description={project.description}
+              href={`/case-studies/${project.slug}`}
+            />
+          ))}
         </div>
       </section>
     </>

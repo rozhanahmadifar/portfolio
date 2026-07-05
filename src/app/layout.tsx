@@ -29,13 +29,19 @@ export default function RootLayout({
             <nav className="flex gap-8">
               <Link
                 href="/"
-                className="body font-medium !text-body no-underline hover:!text-accent"
+                className="body !text-heading no-underline hover:!text-accent"
               >
                 Home
               </Link>
               <Link
+                href="/projects"
+                className="body !text-heading no-underline hover:!text-accent"
+              >
+                Projects
+              </Link>
+              <Link
                 href="/about"
-                className="body font-medium !text-body no-underline hover:!text-accent"
+                className="body !text-heading no-underline hover:!text-accent"
               >
                 About
               </Link>
