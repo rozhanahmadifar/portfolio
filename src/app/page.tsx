@@ -1,53 +1,65 @@
-import ProjectCard from "@/components/ProjectCard";
+import ProjectRow from "@/components/ProjectRow";
+import ImageWithFallback from "@/components/ImageWithFallback";
 import { projects } from "@/data/projects";
 
 export default function Home() {
   return (
     <>
-      <section className="mx-auto max-w-7xl px-10 md:px-14 py-16">
-        <div className="rounded-lg border border-border bg-bg-alt p-8 md:p-12">
-          <div className="flex flex-col md:flex-row md:items-stretch gap-12 md:gap-16">
-            <div className="flex flex-1 flex-col justify-center">
-              <h1 className="!text-heading">Rozhan Ahmadifar</h1>
-              <p className="mt-3 font-semibold !text-accent">
-                Product Designer | User Experience Design
-              </p>
-              <p className="body-lg mt-6">
-                I&apos;m Rozhan, a Product Designer with a background in
-                Interaction Design. Strong in user research, accessibility,
-                and design systems, with hands-on experience across the full
-                design process: interaction design, visual UI, prototyping,
-                and developer handoff, most recently within fintech. Lately,
-                I&apos;ve been focused on AI products, designing experiences
-                that are useful, trustworthy, and easy to act on with
-                confidence.
-              </p>
-            </div>
-            <div className="flex flex-1">
-              <div className="flex w-full items-center justify-center rounded-lg border-2 border-[#dce4fa] bg-white">
-                <span className="h1 !text-accent">RA</span>
-              </div>
+      <header className="relative mx-auto max-w-[1200px] px-10 pt-12 pb-16">
+        <div className="grid grid-cols-1 items-start gap-3 pt-12 md:grid-cols-[1.15fr_0.85fr]">
+          <div>
+            <h1 className="text-name text-[3.2rem] leading-[1.1]">
+              Rozhan Ahmadifar
+            </h1>
+            <p className="pill mt-6 mb-6">
+              Product Designer &middot; User Experience Design
+            </p>
+            <p>
+              I&apos;m Rozhan, a Product Designer with a background in
+              Interaction Design. Strong in user research, accessibility,
+              and design systems, with hands-on experience across the full
+              design process: interaction design, visual UI, prototyping,
+              and developer handoff, most recently within fintech. Lately,
+              I&apos;ve been focused on AI products, designing experiences
+              that are useful, trustworthy, and easy to act on with
+              confidence.
+            </p>
+          </div>
+          {/* Artwork: the teal circle is the outer frame and the photo
+              sits inside it as a normal child, so the ~6px padding reveals
+              the ring evenly on all sides by construction. Sized to 88%
+              width (ml-auto keeps it flush with the column's right edge) -
+              most of the text-to-photo gap was this leftover margin rather
+              than the grid gap itself, so closing it meant sizing the
+              circle up slightly from the previous 82%. */}
+          <div className="-mt-3 ml-auto aspect-square w-[88%] rounded-full bg-teal-deep p-1.5">
+            <div className="relative h-full w-full overflow-hidden rounded-full shadow-[0_16px_40px_rgba(4,52,44,0.15)]">
+              <ImageWithFallback
+                src="/assets/rozhan-photo.jpg"
+                alt="Rozhan Ahmadifar"
+                fallbackLabel="Photo"
+              />
             </div>
           </div>
         </div>
-      </section>
+      </header>
 
-      <section className="mx-auto max-w-6xl px-10 md:px-14 py-20">
-        <div className="text-center">
-          <h2>Projects</h2>
-          <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-accent-secondary" />
-        </div>
-        <div className="mt-12 space-y-8">
-          {projects.map((project) => (
-            <ProjectCard
-              key={project.slug}
-              title={project.title}
-              subtitle={project.subtitle}
-              description={project.description}
-              href={`/case-studies/${project.slug}`}
-            />
-          ))}
-        </div>
+      <section id="projects" className="mx-auto max-w-[1200px] px-10 pt-24 pb-28">
+        <h2 className="text-section-header mb-12 text-center">Projects</h2>
+        {projects.map((project, i) => (
+          <ProjectRow
+            key={project.slug}
+            number={String(i + 1).padStart(2, "0")}
+            eyebrow={project.eyebrow}
+            title={project.title}
+            description={project.description}
+            tags={project.tags}
+            href={`/case-studies/${project.slug}`}
+            media={project.media}
+            mediaAlt={project.title}
+            isLast={i === projects.length - 1}
+          />
+        ))}
       </section>
     </>
   );

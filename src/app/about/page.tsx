@@ -1,76 +1,37 @@
 export const metadata = {
-  title: "About | Portfolio",
+  title: "About | Rozhan Ahmadifar",
 };
-
-const experience = [
-  {
-    role: "Senior Product Designer",
-    org: "Acme Co.",
-    period: "2022 to Present",
-  },
-  {
-    role: "Product Designer",
-    org: "Northwind Studio",
-    period: "2019 to 2022",
-  },
-  {
-    role: "UX Designer",
-    org: "Contoso",
-    period: "2017 to 2019",
-  },
-];
 
 export default function About() {
   return (
-    <section className="mx-auto max-w-3xl px-10 md:px-14 py-16">
-      <p className="caption">About</p>
-      <h1 className="mt-4">Jane Doe</h1>
-      <p className="body-lg mt-6">
-        I&apos;m a product designer based in Toronto, focused on turning messy,
-        ambiguous problems into clear, usable products. My background spans
-        research, interaction design, and front-end prototyping, and I care
-        most about the handoff between what a product should do and how it
-        actually feels to use.
-      </p>
-      <p className="mt-6">
-        Outside of client work, I mentor early-career designers and write
-        about design process. I believe good design is mostly good listening,
-        to users, to constraints, and to the people building alongside you.
-      </p>
-
-      <h2 className="mt-16">Experience</h2>
-      <div className="mt-8 border-t border-border">
-        {experience.map((item) => (
-          <div
-            key={item.role}
-            className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 py-6 border-b border-border"
-          >
-            <div>
-              <h3>{item.role}</h3>
-              <p className="mt-2">{item.org}</p>
-            </div>
-            <p className="caption whitespace-nowrap">{item.period}</p>
-          </div>
-        ))}
+    <section className="mx-auto max-w-[1200px] px-10 py-16 md:py-24">
+      <div className="max-w-2xl">
+        <h1 className="text-name">Rozhan</h1>
+        <p className="mt-8">
+          Hi, I&apos;m Rozhan, a Product Designer with a background in
+          Interaction Design, living in Malm&ouml;. I care most about design
+          challenges rooted in clarity, trust, and making complex things feel
+          simple enough to actually use with confidence.
+        </p>
+        <p className="mt-6">
+          I believe good design creates real business value by reducing risk
+          and helping teams make better decisions earlier, before problems
+          become expensive to fix. I use AI throughout my work, not as a
+          shortcut, but as a way to think faster, explore more possibilities,
+          and arrive at better solutions.
+        </p>
+        <p className="mt-6">
+          I work across the full design process, from user research and
+          interaction design to visual UI and developer handoff, with a
+          strong focus on accessibility and design systems, most recently
+          within fintech.
+        </p>
+        <p className="mt-6">
+          Outside of design, I enjoy traveling, reading, listening to music,
+          and spending time with family and friends. I&apos;m always looking
+          for new experiences and ideas to bring back into my work.
+        </p>
       </div>
-
-      <h2 className="mt-16">Get in touch</h2>
-      <p className="mt-6">
-        The best way to reach me is by{" "}
-        <a href="mailto:hello@example.com" className="font-semibold">
-          email
-        </a>{" "}
-        or on{" "}
-        <a
-          href="https://www.linkedin.com/"
-          className="font-semibold"
-          target="_blank"
-          rel="noreferrer"
-        >
-          LinkedIn
-        </a>
-        .
-      </p>
     </section>
   );
 }
