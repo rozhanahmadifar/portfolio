@@ -51,7 +51,7 @@ export default function CaseStudyHeroWithVisual({
             )}
           </div>
 
-          <div className="w-full max-w-[420px] border-t border-hairline">
+          <div className="w-full max-w-[420px] border-t border-hairline lg:mt-20">
             {quickFacts.map((fact, i) => (
               <div
                 key={fact.label}

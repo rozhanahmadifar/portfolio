@@ -78,6 +78,15 @@ body {
     color: var(--color-ink);
   }
 
+  /* Phase intro paragraph: reads as a lead-in, one step above body copy. */
+  .text-lead {
+    font-family: var(--font-sans);
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-ink);
+  }
+
   /* Subtitle / role label: persona tagline, process phase name, etc. */
   .text-subtitle {
     font-family: var(--font-sans);
@@ -140,7 +149,7 @@ body {
   li,
   .text-body {
     font-family: var(--font-sans);
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.65;
     color: var(--color-ink-soft);
@@ -185,4 +194,30 @@ body {
   ol > li + li {
     margin-top: 8px;
   }
+}
+
+/* Always-visible scrollbar for scrollable evidence screenshots, kept
+   outside @layer so it always wins the cascade regardless of layer
+   ordering, since the scroll affordance shouldn't depend on hover-only
+   OS overlay scrollbars that never render in a static view. */
+.scroll-frame {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.28) transparent;
+}
+
+.scroll-frame::-webkit-scrollbar {
+  width: 7px;
+}
+
+.scroll-frame::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-frame::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.28);
+  border-radius: 9999px;
+}
+
+.scroll-frame::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.42);
 }

@@ -7,11 +7,11 @@ export interface MetricRow {
 export default function MetricTable({ rows }: { rows: MetricRow[] }) {
   return (
     <div className="border-t border-hairline">
-      <div className="flex items-center justify-end gap-3 pt-3">
-        <span className="text-caption not-italic w-[110px] text-center uppercase tracking-wide">
+      <div className="flex items-center justify-end gap-8 pt-3">
+        <span className="text-caption not-italic w-[170px] text-center uppercase tracking-wide">
           Original
         </span>
-        <span className="text-caption not-italic w-[180px] text-center uppercase tracking-wide">
+        <span className="text-caption not-italic w-[230px] text-center uppercase tracking-wide">
           Redesign
         </span>
       </div>
@@ -22,11 +22,11 @@ export default function MetricTable({ rows }: { rows: MetricRow[] }) {
             className="flex flex-wrap items-center justify-between gap-4 py-5"
           >
             <p className="text-meta-label">{row.metric}</p>
-            <div className="flex flex-wrap gap-3">
-              <span className="flex h-10 w-[110px] items-center justify-center rounded-full bg-[#ececE6] px-3 text-center text-sm leading-tight font-medium text-ink-soft">
+            <div className="flex flex-wrap gap-8">
+              <span className="inline-flex h-10 w-[170px] items-center justify-center whitespace-nowrap rounded-full bg-[#ececE6] px-4 text-center text-sm font-medium text-ink-soft">
                 {row.original}
               </span>
-              <span className="flex h-10 w-[180px] items-center justify-center rounded-full bg-teal-pale px-3 text-center text-sm leading-tight font-medium !text-teal">
+              <span className="inline-flex h-10 w-[230px] items-center justify-center whitespace-nowrap rounded-full bg-teal-pale px-4 text-center text-sm font-medium !text-teal">
                 {row.final}
               </span>
             </div>

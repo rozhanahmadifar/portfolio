@@ -16,7 +16,7 @@ export const projects: Project[] = [
   {
     slug: "yoga-website-redesign",
     title: "Yoga Website Redesign",
-    subtitle: "Yoga With Dani",
+    subtitle: "Yoga With Deni",
     description:
       "Redesigned a yoga studio website to improve usability, content structure, and booking flow, using UX research, information architecture, and prototyping to create a clearer, more intuitive experience.",
     eyebrow: "Course Project · 6 weeks",
@@ -24,7 +24,7 @@ export const projects: Project[] = [
     media: {
       type: "image",
       src: "/assets/yoga-laptop.jpg",
-      fallbackLabel: "Yoga With Dani",
+      fallbackLabel: "Yoga With Deni",
     },
   },
   {

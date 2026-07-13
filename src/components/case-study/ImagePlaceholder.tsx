@@ -1,12 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export interface ImagePlaceholderProps {
   label: string;
   src?: string;
   caption?: string;
   aspect?: string;
+  maxHeight?: string;
+  fit?: "cover" | "contain";
+  scrollable?: boolean;
   enlargeable?: boolean;
   objectPosition?: "top" | "center";
 }
@@ -16,28 +19,57 @@ export default function ImagePlaceholder({
   src,
   caption,
   aspect = "aspect-video",
+  maxHeight,
+  fit = "cover",
+  scrollable = false,
   enlargeable = false,
   objectPosition = "center",
 }: ImagePlaceholderProps) {
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    if (!open) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [open]);
+
   const box = (
     <div
-      className={`relative ${aspect} w-full overflow-hidden rounded-[8px] ${
+      className={`relative w-full rounded-[8px] ${
+        maxHeight ? "" : aspect
+      } ${
+        scrollable ? "scroll-frame overflow-y-scroll overflow-x-hidden" : "overflow-hidden"
+      } ${
         src
-          ? "border border-hairline shadow-[0_4px_16px_rgba(20,32,28,0.1)]"
+          ? `border border-hairline shadow-[0_4px_16px_rgba(20,32,28,0.1)] ${
+              fit === "contain" ? "bg-white" : ""
+            }`
           : "border border-dashed border-hairline bg-white flex items-center justify-center"
       }`}
+      style={maxHeight ? { height: maxHeight } : undefined}
     >
       {src ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={src}
-          alt={label}
-          className={`h-full w-full object-cover ${
-            objectPosition === "top" ? "object-top" : "object-center"
-          }`}
-        />
+        scrollable ? (
+          <div
+            className="flex min-h-full w-full flex-col"
+            style={{ justifyContent: "safe center" }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={src} alt={label} className="block w-full h-auto" />
+          </div>
+        ) : (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={src}
+            alt={label}
+            className={`h-full w-full ${
+              fit === "contain" ? "object-contain" : "object-cover"
+            } ${objectPosition === "top" ? "object-top" : "object-center"}`}
+          />
+        )
       ) : (
         <p className="text-caption not-italic px-4 text-center">{label}</p>
       )}
@@ -58,7 +90,9 @@ export default function ImagePlaceholder({
       ) : (
         box
       )}
-      {caption && <figcaption className="text-caption mt-2">{caption}</figcaption>}
+      {caption && (
+        <figcaption className="text-caption mt-2 text-center">{caption}</figcaption>
+      )}
       {open && (
         <div
           role="dialog"

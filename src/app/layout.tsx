@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Fraunces, Mrs_Saint_Delafield } from "next/font/google";
 import Link from "next/link";
 import NavLinks from "@/components/NavLinks";
+import ContactLinks from "@/components/ContactLinks";
 import "./globals.css";
 
 const inter = Inter({
@@ -24,7 +25,15 @@ const mrsSaintDelafield = Mrs_Saint_Delafield({
 
 export const metadata: Metadata = {
   title: "Rozhan Ahmadifar | Product Designer",
-  description: "Product design case studies and projects",
+  description:
+    "Product design case studies and projects by Rozhan Ahmadifar, a Product Designer with a background in Interaction Design.",
+  openGraph: {
+    type: "website",
+    siteName: "Rozhan Ahmadifar",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
@@ -51,8 +60,12 @@ export default function RootLayout({
           </div>
         </header>
         <main className="flex-1">{children}</main>
-        <footer className="border-t border-hairline py-8 text-center">
-          <p className="text-caption not-italic">
+        <footer className="border-t border-hairline py-12 text-center">
+          <p className="text-eyebrow mb-3">Get in touch</p>
+          <div className="flex justify-center">
+            <ContactLinks />
+          </div>
+          <p className="text-caption not-italic mt-8">
             {`© ${new Date().getFullYear()} Rozhan Ahmadifar`}
           </p>
         </footer>

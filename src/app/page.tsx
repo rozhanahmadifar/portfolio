@@ -1,5 +1,6 @@
 import ProjectRow from "@/components/ProjectRow";
 import ImageWithFallback from "@/components/ImageWithFallback";
+import ContactLinks from "@/components/ContactLinks";
 import { projects } from "@/data/projects";
 
 export default function Home() {
@@ -16,14 +17,15 @@ export default function Home() {
             </p>
             <p>
               I&apos;m Rozhan, a Product Designer with a background in
-              Interaction Design. Strong in user research, accessibility,
-              and design systems, with hands-on experience across the full
-              design process: interaction design, visual UI, prototyping,
-              and developer handoff, most recently within fintech. Lately,
-              I&apos;ve been focused on AI products, designing experiences
-              that are useful, trustworthy, and easy to act on with
-              confidence.
+              Interaction Design. I focus on UX research, accessibility, and
+              design systems, most recently within fintech. Lately I&apos;ve
+              been designing AI products that people can act on with
+              confidence, not just trust on faith.
             </p>
+            <div className="mt-8">
+              <p className="text-eyebrow mb-3">Get in touch</p>
+              <ContactLinks />
+            </div>
           </div>
           {/* Artwork: the teal circle is the outer frame and the photo
               sits inside it as a normal child, so the ~6px padding reveals
