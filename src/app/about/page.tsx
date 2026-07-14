@@ -10,7 +10,7 @@ export default function About() {
   return (
     <section className="mx-auto max-w-[1200px] px-10 py-16 md:py-24">
       <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1.15fr_0.85fr]">
-        <div>
+        <div className="order-2 lg:order-none">
           <h1 className="text-name">Rozhan</h1>
           <p className="mt-8">
             Hi, I&apos;m Rozhan, a Product Designer with a background in
@@ -48,7 +48,7 @@ export default function About() {
             Get in touch <span aria-hidden="true">↗</span>
           </a>
         </div>
-        <div className="mx-auto w-full max-w-[440px] lg:mx-0 lg:ml-auto">
+        <div className="order-1 mx-auto w-full max-w-[440px] lg:order-none lg:mx-0 lg:ml-auto">
           <div className="relative aspect-[2/3] w-full overflow-hidden rounded-[16px] border border-hairline shadow-[0_16px_40px_rgba(4,52,44,0.15)]">
             <ImageWithFallback
               src="/assets/rozhan-about.jpg"

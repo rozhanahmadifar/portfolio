@@ -15,7 +15,7 @@ export default function CaseStudyHeroWithVisual({
   ctaHref,
   heroVisualLabel,
   heroVisualSrc,
-  heroVisualAspect = "h-[780px]",
+  heroVisualAspect = "aspect-[3/2] lg:aspect-auto lg:h-[780px]",
 }: {
   client: string;
   title: string;
