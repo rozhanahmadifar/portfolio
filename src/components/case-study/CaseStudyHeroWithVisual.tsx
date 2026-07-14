@@ -31,10 +31,12 @@ export default function CaseStudyHeroWithVisual({
   return (
     <section className="bg-teal-pale">
       <div className="mx-auto max-w-[1200px] px-10 pt-20 pb-12 md:pt-28">
-        <div className="grid gap-y-10 lg:grid-cols-[1fr_420px] lg:items-start lg:gap-x-28">
+        <div className="grid grid-cols-1 gap-y-10 lg:grid-cols-[1fr_420px] lg:items-start lg:gap-x-28">
           <div>
             <p className="text-eyebrow mb-3">{client}</p>
-            <h1 className="text-name leading-[1.12]">{title}</h1>
+            <h1 className="text-name text-[2.6rem] leading-[1.1] sm:text-[3.6rem] lg:text-[5.2rem] lg:leading-[1.12]">
+              {title}
+            </h1>
             <p className="text-subtitle !text-ink-soft mt-4 max-w-2xl">
               {tagline}
             </p>

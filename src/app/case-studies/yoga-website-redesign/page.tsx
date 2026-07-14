@@ -221,7 +221,7 @@ export default function YogaWebsiteRedesign() {
                 </strong>
                 , which made every task harder than it needed to be.
               </p>
-              <div className="mt-6 grid items-start gap-8 sm:grid-cols-[1fr_420px]">
+              <div className="mt-6 grid grid-cols-1 items-start gap-8 sm:grid-cols-[1fr_420px]">
                 <NumberedList
                   items={[
                     "No visible logo, weakening brand recognition from the first second.",

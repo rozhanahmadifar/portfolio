@@ -68,7 +68,7 @@ export default function AmbientEnergyDevice() {
               response rather than technical accuracy.
             </p>
             <div className="mt-8 max-w-[1120px]">
-              <div className="grid grid-cols-3 gap-5">
+              <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
                 <ImagePlaceholder
                   label="Lifestyle photo: working at a desk"
                   src="/assets/candel-lifestyle-desk.jpg"
