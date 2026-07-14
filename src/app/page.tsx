@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <header className="relative mx-auto max-w-[1200px] px-10 pt-12 pb-16">
         <div className="grid grid-cols-1 items-start gap-3 pt-12 md:grid-cols-[1.15fr_0.85fr]">
-          <div>
+          <div className="order-2 md:order-none">
             <h1 className="text-name text-[3.2rem] leading-[1.1]">
               Rozhan Ahmadifar
             </h1>
@@ -33,8 +33,11 @@ export default function Home() {
               width (ml-auto keeps it flush with the column's right edge) -
               most of the text-to-photo gap was this leftover margin rather
               than the grid gap itself, so closing it meant sizing the
-              circle up slightly from the previous 82%. */}
-          <div className="-mt-3 ml-auto aspect-square w-[88%] rounded-full bg-teal-deep p-1.5">
+              circle up slightly from the previous 82%. On mobile it's
+              reordered above the text, centered rather than right-flushed,
+              and drops the md-only negative margin that aligned it with
+              the text baseline in the two-column layout. */}
+          <div className="order-1 mx-auto aspect-square w-[70%] rounded-full bg-teal-deep p-1.5 md:order-none md:-mt-3 md:ml-auto md:w-[88%]">
             <div className="relative h-full w-full overflow-hidden rounded-full shadow-[0_16px_40px_rgba(4,52,44,0.15)]">
               <ImageWithFallback
                 src="/assets/rozhan-photo.jpg"
