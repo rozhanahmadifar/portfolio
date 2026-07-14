@@ -287,7 +287,7 @@ export default function AmbientEnergyDevice() {
                 supporting everyday awareness without demanding attention or
                 creating stress.
               </p>
-              <div className="mt-6 grid grid-cols-2 gap-6">
+              <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <ImagePlaceholder
                   label="Efergy monitor"
                   src="/assets/candel-competitor-efergy-43.jpg"
@@ -441,7 +441,7 @@ export default function AmbientEnergyDevice() {
                   than abstract numbers or comparisons with others
                 </li>
               </ul>
-              <div className="mt-6 grid grid-cols-2 gap-6">
+              <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <ImagePlaceholder
                   label="How Might We board, 1 of 2"
                   src="/assets/candel-hmw-board-1.jpg"
@@ -559,7 +559,7 @@ export default function AmbientEnergyDevice() {
                 read while keeping the experience calm, subtle, and
                 non-intrusive.
               </p>
-              <div className="mt-6 grid grid-cols-2 gap-6">
+              <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <ImagePlaceholder
                   label="Above the average: warm light"
                   src="/assets/candel-proto1-above-average.jpg"

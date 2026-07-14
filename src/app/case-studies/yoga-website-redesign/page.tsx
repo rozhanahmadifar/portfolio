@@ -531,7 +531,7 @@ export default function YogaWebsiteRedesign() {
                   ]}
                 />
                 <div>
-                  <div className="grid grid-cols-2 items-start gap-6">
+                  <div className="grid grid-cols-1 items-start gap-6 sm:grid-cols-2">
                     <ImagePlaceholder
                       label="V1 Home Page"
                       src="/assets/yoga-v1-home.jpg"
@@ -579,7 +579,7 @@ export default function YogaWebsiteRedesign() {
                   ]}
                 />
                 <div>
-                  <div className="grid grid-cols-2 items-start gap-6">
+                  <div className="grid grid-cols-1 items-start gap-6 sm:grid-cols-2">
                     <ImagePlaceholder
                       label="V2 Home Page"
                       src="/assets/yoga-v2-home.jpg"
