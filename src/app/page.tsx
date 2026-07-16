@@ -18,9 +18,10 @@ export default function Home() {
             <p>
               I&apos;m Rozhan, a Product Designer with a background in
               Interaction Design. I focus on UX research, accessibility, and
-              design systems, most recently within fintech. Lately I&apos;ve
-              been designing AI products that people can act on with
-              confidence, not just trust on faith.
+              design systems, most recently within fintech. Lately,
+              I&apos;ve been focused on AI products, designing experiences
+              that are useful, trustworthy, and easy to act on with
+              confidence.
             </p>
             <div className="mt-8">
               <p className="text-eyebrow mb-3">Get in touch</p>
