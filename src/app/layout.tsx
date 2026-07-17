@@ -72,7 +72,7 @@ export default function RootLayout({
           <div className="mx-auto flex h-[90px] max-w-[1200px] items-center justify-between px-10">
             <Link
               href="/"
-              className="relative top-[6px] text-[28px] leading-none !text-teal-deep"
+              className="relative top-[6px] mr-3 text-[28px] leading-none !text-teal-deep"
               style={{ fontFamily: "var(--font-mrs-saint-delafield)" }}
             >
               RA
