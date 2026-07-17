@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <header className="relative mx-auto max-w-[1200px] px-10 pt-12 pb-16">
-        <div className="grid grid-cols-1 items-start gap-3 pt-12 md:grid-cols-[1.15fr_0.85fr]">
+        <div className="grid grid-cols-1 items-start gap-3 md:pt-12 md:grid-cols-[1.15fr_0.85fr]">
           <div className="order-2 md:order-none">
             <h1 className="text-name text-[3.2rem] leading-[1.1]">
               Rozhan Ahmadifar
