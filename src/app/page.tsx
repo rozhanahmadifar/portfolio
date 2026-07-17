@@ -13,7 +13,7 @@ export default function Home() {
               Rozhan Ahmadifar
             </h1>
             <p className="pill mt-6 mb-6">
-              Product Designer &middot; User Experience Design
+              Product Designer &middot; Design Systems &amp; UX Research
             </p>
             <p>
               I&apos;m Rozhan, a Product Designer with a background in
