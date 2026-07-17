@@ -23,7 +23,7 @@ export default function Home() {
               working on AI products, where earning the user&apos;s trust
               is the hardest and most interesting part.
             </p>
-            <div className="mt-8">
+            <div className="mt-6">
               <p className="text-eyebrow mb-3">Get in touch</p>
               <ContactLinks />
             </div>
