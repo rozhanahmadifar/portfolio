@@ -58,7 +58,7 @@ export default function MobileNav() {
               </svg>
             </button>
           </div>
-          <nav className="flex flex-1 flex-col items-center justify-center gap-10">
+          <nav className="flex flex-1 flex-col items-center gap-10 pt-14">
             {navLinks.map((link) => {
               const isActive = isNavLinkActive(link, pathname);
               return (
