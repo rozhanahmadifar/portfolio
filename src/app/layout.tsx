@@ -23,16 +23,37 @@ const mrsSaintDelafield = Mrs_Saint_Delafield({
   subsets: ["latin"],
 });
 
+const SITE_URL = "https://rozhanahmadifar.com";
+const SITE_TITLE = "Rozhan Ahmadifar | Product Designer";
+const SITE_DESCRIPTION =
+  "Product Designer with a background in Interaction Design, most recently working in fintech. I make complex things feel simple and trustworthy enough to act on with confidence.";
+
 export const metadata: Metadata = {
-  title: "Rozhan Ahmadifar | Product Designer",
-  description:
-    "Product design case studies and projects by Rozhan Ahmadifar, a Product Designer with a background in Interaction Design.",
+  metadataBase: new URL(SITE_URL),
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  alternates: {
+    canonical: SITE_URL,
+  },
   openGraph: {
-    type: "website",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
     siteName: "Rozhan Ahmadifar",
+    type: "website",
+    images: [
+      {
+        url: `${SITE_URL}/og-image.png`,
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: [`${SITE_URL}/og-image.png`],
   },
 };
 
