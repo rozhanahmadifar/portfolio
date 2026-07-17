@@ -17,11 +17,11 @@ export default function Home() {
             </p>
             <p>
               I&apos;m Rozhan, a Product Designer with a background in
-              Interaction Design. I focus on UX research, accessibility, and
-              design systems, most recently within fintech. Lately,
-              I&apos;ve been focused on AI products, designing experiences
-              that are useful, trustworthy, and easy to act on with
-              confidence.
+              Interaction Design, most recently working in fintech. I care
+              about making complex things feel simple and trustworthy
+              enough to act on with confidence. Lately, I&apos;ve been
+              working on AI products, where earning the user&apos;s trust
+              is the hardest and most interesting part.
             </p>
             <div className="mt-8">
               <p className="text-eyebrow mb-3">Get in touch</p>
