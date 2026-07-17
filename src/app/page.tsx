@@ -44,6 +44,7 @@ export default function Home() {
                 src="/assets/rozhan-photo.jpg"
                 alt="Rozhan Ahmadifar"
                 fallbackLabel="Photo"
+                className="object-[center_35%]"
               />
             </div>
           </div>
