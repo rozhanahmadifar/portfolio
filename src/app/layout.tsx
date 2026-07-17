@@ -83,11 +83,9 @@ export default function RootLayout({
           </div>
         </header>
         <main className="flex-1">{children}</main>
-        <footer className="border-t border-hairline py-12 text-center">
+        <footer className="border-t border-hairline px-10 py-12 text-center">
           <p className="text-eyebrow mb-3">Get in touch</p>
-          <div className="flex justify-center">
-            <ContactLinks />
-          </div>
+          <ContactLinks className="justify-center" />
           <p className="text-caption not-italic mt-8">
             {`© ${new Date().getFullYear()} Rozhan Ahmadifar`}
           </p>
