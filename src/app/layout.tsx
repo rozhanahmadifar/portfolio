@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Fraunces, Mrs_Saint_Delafield } from "next/font/google";
 import Link from "next/link";
 import NavLinks from "@/components/NavLinks";
+import MobileNav from "@/components/MobileNav";
 import ContactLinks from "@/components/ContactLinks";
 import "./globals.css";
 
@@ -78,6 +79,7 @@ export default function RootLayout({
               RA
             </Link>
             <NavLinks />
+            <MobileNav />
           </div>
         </header>
         <main className="flex-1">{children}</main>

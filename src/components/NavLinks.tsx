@@ -2,22 +2,15 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-const links = [
-  { href: "/", label: "Home", trackActive: true },
-  { href: "/#projects", label: "Projects", trackActive: false },
-  { href: "/about", label: "About", trackActive: true },
-];
+import { navLinks, isNavLinkActive } from "@/data/navLinks";
 
 export default function NavLinks() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex gap-10">
-      {links.map((link) => {
-        const isActive =
-          link.trackActive &&
-          (link.href === "/" ? pathname === "/" : pathname.startsWith(link.href));
+    <nav className="hidden gap-10 md:flex">
+      {navLinks.map((link) => {
+        const isActive = isNavLinkActive(link, pathname);
         return (
           <Link
             key={link.href}
