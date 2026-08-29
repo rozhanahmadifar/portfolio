@@ -17,7 +17,7 @@ export default function Home() {
             </p>
             <p>
               I&apos;m Rozhan, a Product Designer with a background in
-              Interaction Design, most recently working in fintech. I care
+              Interaction Design, most recently working in B2B SaaS. I care
               about making complex things feel simple and trustworthy
               enough to act on with confidence. Lately, I&apos;ve been
               working on AI products, where earning the user&apos;s trust
