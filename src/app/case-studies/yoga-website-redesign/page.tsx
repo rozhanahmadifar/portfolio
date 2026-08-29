@@ -376,7 +376,7 @@ export default function YogaWebsiteRedesign() {
               name="Scenario & User Flow"
               outcome="Mapping Lina's journey showed where trust broke: after payment, nothing confirmed her booking went through."
             >
-              <ol className="max-w-2xl">
+              <ol>
                 <li>After a period of feeling tense and out of balance, Lina began looking for a gentle way to support her wellbeing and create more calm in her routine.</li>
                 <li>While searching online, Lina found a yoga studio site with a calm atmosphere and clear structure, and navigated straight to the Classes section.</li>
                 <li>Lina browsed the class overview, picked one that caught her interest, and felt confident enough to continue booking thanks to clear options like &ldquo;Book This Class.&rdquo;</li>
