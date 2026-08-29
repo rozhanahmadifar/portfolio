@@ -65,7 +65,8 @@ export default function ProjectRow({
             loop
             playsInline
             poster={media.poster}
-            className="h-full w-full object-cover object-[center_70%]"
+            className={`h-full w-full ${media.fit === "contain" ? "object-contain" : "object-cover"}`}
+            style={{ objectPosition: media.objectPosition ?? "center 70%" }}
           >
             <source src={media.src} type="video/mp4" />
           </video>

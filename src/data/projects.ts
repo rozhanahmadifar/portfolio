@@ -1,6 +1,12 @@
 export type ProjectMedia =
   | { type: "image"; src: string; fallbackLabel: string }
-  | { type: "video"; src: string; poster?: string };
+  | {
+      type: "video";
+      src: string;
+      poster?: string;
+      objectPosition?: string;
+      fit?: "cover" | "contain";
+    };
 
 export interface Project {
   slug: string;
@@ -13,6 +19,20 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    slug: "planning-together",
+    title: "Planning Together",
+    subtitle: "TripTogether",
+    description:
+      "TripTogether is a mobile app for planning trips as a group. It pairs a private space for collecting ideas with a shared space for bringing them out, so nothing the group decides gets lost, and its AI answers practical questions like visas and group discounts instead of making choices for the group.",
+    eyebrow: "Thesis Project · 4 months",
+    tags: ["UX Research", "AI Interaction Design", "Usability Testing"],
+    media: {
+      type: "video",
+      src: "/assets/planning-together.mp4",
+      objectPosition: "center 58%",
+    },
+  },
   {
     slug: "yoga-website-redesign",
     title: "Yoga Website Redesign",
