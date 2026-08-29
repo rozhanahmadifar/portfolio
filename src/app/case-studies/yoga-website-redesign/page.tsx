@@ -377,27 +377,10 @@ export default function YogaWebsiteRedesign() {
               outcome="Mapping Lina's journey showed where trust broke: after payment, nothing confirmed her booking went through."
             >
               <ol className="max-w-2xl">
-                <li>
-                  After a period of feeling tense and out of balance, Lina
-                  began looking for a gentle way to support her wellbeing
-                  and create more calm in her routine.
-                </li>
-                <li>
-                  While searching online, Lina found a yoga studio site
-                  with a calm atmosphere and clear structure, and
-                  navigated straight to the Classes section.
-                </li>
-                <li>
-                  Lina browsed the class overview, picked one that caught
-                  her interest, and felt confident enough to continue
-                  booking thanks to clear options like &ldquo;Book This
-                  Class.&rdquo;
-                </li>
-                <li>
-                  Lina completed booking, reviewed the summary, and paid.
-                  The confirmation reassured her, and she returned to
-                  browse future classes.
-                </li>
+                <li>After a period of feeling tense and out of balance, Lina began looking for a gentle way to support her wellbeing and create more calm in her routine.</li>
+                <li>While searching online, Lina found a yoga studio site with a calm atmosphere and clear structure, and navigated straight to the Classes section.</li>
+                <li>Lina browsed the class overview, picked one that caught her interest, and felt confident enough to continue booking thanks to clear options like &ldquo;Book This Class.&rdquo;</li>
+                <li>Lina completed booking, reviewed the summary, and paid. The confirmation reassured her, and she returned to browse future classes.</li>
               </ol>
               <div className="mt-6 w-full rounded-[8px] border border-hairline bg-white px-6 py-6 sm:px-8 sm:py-8">
                 <ImagePlaceholder

@@ -360,7 +360,7 @@ export default function PlanningTogether() {
             <div className="mt-6">
               <p>
                 The design was tested across three rounds, three people in
-                the first, two in the second, and four in the last.
+                the first, two in the second, and seven in the last.
                 Everything below comes from that final round, testing the
                 finished version. Each person was tested on their own,
                 following a planning scenario I gave them and thinking out
