@@ -337,7 +337,7 @@ export default function PlanningTogether() {
           heroVisualSrc="/assets/triptogether-app-screens.jpg"
           quickFacts={[
             { label: "Role", value: "Product Designer" },
-            { label: "Duration", value: "4 months" },
+            { label: "Duration", value: "5 months" },
             { label: "Team", value: "Solo" },
             {
               label: "Tools",

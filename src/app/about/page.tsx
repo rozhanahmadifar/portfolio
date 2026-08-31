@@ -30,7 +30,7 @@ export default function About() {
             I work across the full design process, from user research and
             interaction design to visual UI and developer handoff, with a
             strong focus on accessibility and design systems, most recently
-            within fintech.
+            on a B2B SaaS product.
           </p>
           <p className="mt-6">
             Outside of design, I enjoy traveling, reading, listening to

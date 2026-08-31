@@ -25,7 +25,7 @@ export const projects: Project[] = [
     subtitle: "TripTogether",
     description:
       "TripTogether is a mobile app for planning trips as a group. It pairs a private space for collecting ideas with a shared space for bringing them out, so nothing the group decides gets lost, and its AI answers practical questions like visas and group discounts instead of making choices for the group.",
-    eyebrow: "Thesis Project · 4 months",
+    eyebrow: "Thesis Project · 5 months",
     tags: ["UX Research", "AI Interaction Design", "Collaborative Design"],
     media: {
       type: "video",
