@@ -24,7 +24,7 @@ const mrsSaintDelafield = Mrs_Saint_Delafield({
   subsets: ["latin"],
 });
 
-export const SITE_URL = "https://rozhanahmadifar.com";
+export const SITE_URL = "https://www.rozhanahmadifar.com";
 const SITE_TITLE = "Rozhan Ahmadifar | Product Designer";
 const SITE_DESCRIPTION =
   "Product Designer with a background in Interaction Design, most recently working in a B2B SaaS product. I make complex things feel simple and trustworthy enough to act on with confidence.";
