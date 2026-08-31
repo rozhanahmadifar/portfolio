@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import CaseStudyHeroWithVisual from "@/components/case-study/CaseStudyHeroWithVisual";
 import Callout from "@/components/case-study/Callout";
 import PullQuote from "@/components/case-study/PullQuote";
@@ -7,14 +8,38 @@ import PersonaCard from "@/components/case-study/PersonaCard";
 import NumberedList from "@/components/case-study/NumberedList";
 import ResearchRow from "@/components/case-study/ResearchRow";
 import CaseStudyNav from "@/components/case-study/CaseStudyNav";
+import { SITE_URL } from "../../layout";
 
 const PROTOTYPE_URL =
   "https://www.figma.com/proto/xjdGmiB5tDzPc2xgq3jny2/Untitled--Copy-?node-id=4711-2367&t=sSg6hA4qB6mp6m4r-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4711%3A2367";
 
-export const metadata = {
-  title: "Yoga Website Redesign | Rozhan Ahmadifar",
-  description:
-    "Redesigned a yoga studio website to improve usability, content structure, and booking flow, using UX research, information architecture, and prototyping.",
+const PAGE_TITLE = "Yoga Website Redesign | Rozhan Ahmadifar";
+const OG_TITLE = "Yoga Website Redesign (Studio Booking Site UX)";
+const DESCRIPTION =
+  "Redesigned a yoga studio website to improve usability, content structure, and booking flow, using UX research, information architecture, and prototyping.";
+const PAGE_URL = `${SITE_URL}/case-studies/yoga-website-redesign`;
+const OG_IMAGE = `${SITE_URL}/assets/og-yoga-website-redesign.jpg`;
+
+export const metadata: Metadata = {
+  title: PAGE_TITLE,
+  description: DESCRIPTION,
+  alternates: {
+    canonical: PAGE_URL,
+  },
+  openGraph: {
+    title: OG_TITLE,
+    description: DESCRIPTION,
+    url: PAGE_URL,
+    siteName: "Rozhan Ahmadifar",
+    type: "article",
+    images: [{ url: OG_IMAGE, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: OG_TITLE,
+    description: DESCRIPTION,
+    images: [OG_IMAGE],
+  },
 };
 
 function SectionNumber({ number }: { number: string }) {

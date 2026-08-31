@@ -1,7 +1,36 @@
+import type { Metadata } from "next";
 import ProjectRow from "@/components/ProjectRow";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import ContactLinks from "@/components/ContactLinks";
 import { projects } from "@/data/projects";
+import { SITE_URL } from "./layout";
+
+const TITLE = "Rozhan Ahmadifar | Product Designer";
+const DESCRIPTION =
+  "Portfolio of Rozhan Ahmadifar, a Product Designer with a background in Interaction Design, most recently in B2B SaaS. Case studies in UX research, interaction design, and design systems.";
+const OG_IMAGE = `${SITE_URL}/og-image.png`;
+
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: {
+    canonical: SITE_URL,
+  },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: SITE_URL,
+    siteName: "Rozhan Ahmadifar",
+    type: "website",
+    images: [{ url: OG_IMAGE, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [OG_IMAGE],
+  },
+};
 
 export default function Home() {
   return (
@@ -17,11 +46,11 @@ export default function Home() {
             </p>
             <p>
               I&apos;m Rozhan, a Product Designer with a background in
-              Interaction Design, most recently working in B2B SaaS. I care
-              about making complex things feel simple and trustworthy
-              enough to act on with confidence. Lately, I&apos;ve been
-              working on AI products, where earning the user&apos;s trust
-              is the hardest and most interesting part.
+              Interaction Design, most recently in B2B SaaS. I care about
+              making complicated things feel simple enough to act on with
+              confidence. Lately, I&apos;ve been working on AI products,
+              where earning the user&apos;s trust is the hardest and most
+              interesting part.
             </p>
             <div className="mt-6">
               <p className="text-eyebrow mb-3">Get in touch</p>

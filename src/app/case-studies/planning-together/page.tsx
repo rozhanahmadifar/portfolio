@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import CaseStudyHeroWithVisual from "@/components/case-study/CaseStudyHeroWithVisual";
 import ImagePlaceholder from "@/components/case-study/ImagePlaceholder";
@@ -7,16 +8,40 @@ import PullQuote from "@/components/case-study/PullQuote";
 import ResearchRow from "@/components/case-study/ResearchRow";
 import NumberedList from "@/components/case-study/NumberedList";
 import CaseStudyNav from "@/components/case-study/CaseStudyNav";
+import { SITE_URL } from "../../layout";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-plus-jakarta-sans",
 });
 
-export const metadata = {
-  title: "Planning Together | Rozhan Ahmadifar",
-  description:
-    "TripTogether is a mobile app for planning trips as a group, pairing a private space for collecting ideas with a shared space for bringing them out.",
+const PAGE_TITLE = "Planning Together | Rozhan Ahmadifar";
+const OG_TITLE = "Planning Together (AI Group Trip Planning App)";
+const DESCRIPTION =
+  "TripTogether is a mobile app for planning trips as a group, pairing a private space for collecting ideas with a shared space for bringing them out, plus an AI assistant that answers practical trip questions.";
+const PAGE_URL = `${SITE_URL}/case-studies/planning-together`;
+const OG_IMAGE = `${SITE_URL}/assets/og-planning-together.jpg`;
+
+export const metadata: Metadata = {
+  title: PAGE_TITLE,
+  description: DESCRIPTION,
+  alternates: {
+    canonical: PAGE_URL,
+  },
+  openGraph: {
+    title: OG_TITLE,
+    description: DESCRIPTION,
+    url: PAGE_URL,
+    siteName: "Rozhan Ahmadifar",
+    type: "article",
+    images: [{ url: OG_IMAGE, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: OG_TITLE,
+    description: DESCRIPTION,
+    images: [OG_IMAGE],
+  },
 };
 
 function SectionNumber({ number }: { number: string }) {

@@ -1,14 +1,39 @@
+import type { Metadata } from "next";
 import CaseStudyHeroWithVisual from "@/components/case-study/CaseStudyHeroWithVisual";
 import Callout from "@/components/case-study/Callout";
 import PullQuote from "@/components/case-study/PullQuote";
 import ImagePlaceholder from "@/components/case-study/ImagePlaceholder";
 import ResearchRow from "@/components/case-study/ResearchRow";
 import CaseStudyNav from "@/components/case-study/CaseStudyNav";
+import { SITE_URL } from "../../layout";
 
-export const metadata = {
-  title: "Ambient Energy Device | Rozhan Ahmadifar",
-  description:
-    "Cand-EL is an ambient, candle-shaped device that reflects household electricity use through calm light feedback, helping users build energy awareness without guilt.",
+const PAGE_TITLE = "Ambient Energy Device | Rozhan Ahmadifar";
+const OG_TITLE = "Ambient Energy Device (Cand-EL Energy Feedback Device)";
+const DESCRIPTION =
+  "Cand-EL is an ambient, candle-shaped device that reflects household electricity use through calm light feedback, helping users build energy awareness without guilt.";
+const PAGE_URL = `${SITE_URL}/case-studies/ambient-energy-device`;
+const OG_IMAGE = `${SITE_URL}/assets/og-ambient-energy-device.jpg`;
+
+export const metadata: Metadata = {
+  title: PAGE_TITLE,
+  description: DESCRIPTION,
+  alternates: {
+    canonical: PAGE_URL,
+  },
+  openGraph: {
+    title: OG_TITLE,
+    description: DESCRIPTION,
+    url: PAGE_URL,
+    siteName: "Rozhan Ahmadifar",
+    type: "article",
+    images: [{ url: OG_IMAGE, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: OG_TITLE,
+    description: DESCRIPTION,
+    images: [OG_IMAGE],
+  },
 };
 
 function SectionNumber({ number }: { number: string }) {

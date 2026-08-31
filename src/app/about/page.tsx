@@ -1,9 +1,34 @@
+import type { Metadata } from "next";
 import ImageWithFallback from "@/components/ImageWithFallback";
+import { SITE_URL } from "../layout";
 
-export const metadata = {
-  title: "About | Rozhan Ahmadifar",
-  description:
-    "Rozhan Ahmadifar is a Product Designer with a background in Interaction Design, focused on clarity, trust, and accessible design systems.",
+const PAGE_TITLE = "About | Rozhan Ahmadifar";
+const OG_TITLE = "About Rozhan Ahmadifar";
+const DESCRIPTION =
+  "Rozhan Ahmadifar is a Product Designer with a background in Interaction Design, focused on clarity, trust, and accessible design systems, most recently on a B2B SaaS product.";
+const PAGE_URL = `${SITE_URL}/about`;
+const OG_IMAGE = `${SITE_URL}/assets/og-about.jpg`;
+
+export const metadata: Metadata = {
+  title: PAGE_TITLE,
+  description: DESCRIPTION,
+  alternates: {
+    canonical: PAGE_URL,
+  },
+  openGraph: {
+    title: OG_TITLE,
+    description: DESCRIPTION,
+    url: PAGE_URL,
+    siteName: "Rozhan Ahmadifar",
+    type: "website",
+    images: [{ url: OG_IMAGE, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: OG_TITLE,
+    description: DESCRIPTION,
+    images: [OG_IMAGE],
+  },
 };
 
 export default function About() {
@@ -13,31 +38,34 @@ export default function About() {
         <div className="order-2 lg:order-none">
           <h1 className="text-name">Rozhan</h1>
           <p className="mt-8">
-            Hi, I&apos;m Rozhan, a Product Designer with a background in
-            Interaction Design, based in Malm&ouml; and open to relocating.
-            I care most about design challenges rooted in clarity, trust,
-            and making complex things feel simple enough to actually use
-            with confidence.
+            Hi, I&apos;m Rozhan. I&apos;m a Product Designer based in
+            Malm&ouml;, with a background in Interaction Design, and open to
+            relocating.
           </p>
           <p className="mt-6">
-            I believe good design creates real business value by reducing
-            risk and helping teams make better decisions earlier, before
-            problems become expensive to fix. I use AI throughout my work,
-            not as a shortcut, but as a way to think faster, explore more
-            possibilities, and arrive at better solutions.
+            What I enjoy most is taking something complicated and making it
+            feel simple to use. Not just simple to look at, but simple
+            enough that someone feels sure about what they&apos;re doing.
           </p>
           <p className="mt-6">
             I work across the full design process, from user research and
             interaction design to visual UI and developer handoff, with a
             strong focus on accessibility and design systems, most recently
-            on a B2B SaaS product.
+            on a B2B SaaS product. I also build my own prototypes in code
+            when a static screen can&apos;t answer the question. My thesis
+            was a group trip planning app that I designed and coded in
+            React, and testing it changed what I ended up building.
           </p>
           <p className="mt-6">
-            Outside of design, I enjoy traveling, reading, listening to
-            music, and spending time with family and friends. I&apos;m
-            always looking for new experiences and ideas to bring back into
-            my work, whether that&apos;s a perspective from another culture,
-            a habit from a completely different field, or just a better
+            I use AI throughout my work, not as a shortcut, but as a way to
+            think faster, explore more possibilities, and get something
+            testable in front of people sooner.
+          </p>
+          <p className="mt-6">
+            Outside of design, I travel, read, and listen to a lot of
+            music. Most of what I bring back into my work comes from
+            somewhere else entirely: a perspective from another culture, a
+            habit from a completely different field, or just a better
             question to ask at the start of a project.
           </p>
           <p className="mt-6">Feel free to reach out, I&apos;d love to hear from you.</p>
