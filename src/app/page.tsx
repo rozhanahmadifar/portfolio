@@ -7,7 +7,7 @@ import { SITE_URL } from "./layout";
 
 const TITLE = "Rozhan Ahmadifar | Product Designer";
 const DESCRIPTION =
-  "Portfolio of Rozhan Ahmadifar, a Product Designer with a background in Interaction Design, most recently in B2B SaaS. Case studies in UX research, interaction design, and design systems.";
+  "Rozhan Ahmadifar, Product Designer focused on product discovery and prototyping in code. I find the real problem through analytics, interviews, and user testing.";
 const OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 export const metadata: Metadata = {
@@ -42,15 +42,25 @@ export default function Home() {
               Rozhan Ahmadifar
             </h1>
             <p className="pill mt-6 mb-6">
-              Product Designer &middot; Design Systems &amp; UX Research
+              Product Designer &middot; Product Discovery &amp; Prototyping
+              in Code
             </p>
             <p>
-              I&apos;m Rozhan, a Product Designer with a background in
-              Interaction Design, most recently in B2B SaaS. I care about
-              making complicated things feel simple enough to act on with
-              confidence. Lately, I&apos;ve been working on AI products,
-              where earning the user&apos;s trust is the hardest and most
-              interesting part.
+              I&apos;m Rozhan, a Product Designer focused on discovery and
+              research, with a background in Interaction Design.
+            </p>
+            <p className="mt-4">
+              I find the real problem through analytics, interviews, and
+              user testing, and scale the research to the project&apos;s
+              timeline. The findings become prototypes that I design and
+              code myself, using AI tools such as Claude Code to research
+              and build faster.
+            </p>
+            <p className="mt-4">
+              My experience is in B2B SaaS, marketplaces, and web &amp;
+              mobile products with complex workflows, where I care most
+              about making complicated things feel simple enough to act on
+              with confidence.
             </p>
             <div className="mt-6">
               <p className="text-eyebrow mb-3">Get in touch</p>
@@ -89,8 +99,13 @@ export default function Home() {
             eyebrow={project.eyebrow}
             title={project.title}
             description={project.description}
+            resultLine={project.resultLine}
             tags={project.tags}
-            href={`/case-studies/${project.slug}`}
+            href={
+              project.comingSoon
+                ? undefined
+                : `/case-studies/${project.slug}`
+            }
             media={project.media}
             mediaAlt={project.title}
             isLast={i === projects.length - 1}

@@ -1,12 +1,16 @@
 import Link from "next/link";
 import { projects } from "@/data/projects";
 
+// Projects marked comingSoon have no public case study yet, so they stay out
+// of the previous/next links.
+const linkable = projects.filter((p) => !p.comingSoon);
+
 export default function CaseStudyNav({ currentSlug }: { currentSlug: string }) {
-  const index = projects.findIndex((p) => p.slug === currentSlug);
+  const index = linkable.findIndex((p) => p.slug === currentSlug);
   if (index === -1) return null;
 
-  const next = projects[(index + 1) % projects.length];
-  const prev = projects[(index - 1 + projects.length) % projects.length];
+  const next = linkable[(index + 1) % linkable.length];
+  const prev = linkable[(index - 1 + linkable.length) % linkable.length];
   const showPrev = prev.slug !== next.slug;
 
   return (
