@@ -50,17 +50,17 @@ export default function Home() {
               research, with a background in Interaction Design.
             </p>
             <p className="mt-4">
-              I find the real problem through analytics, interviews, and
-              user testing, and scale the research to the project&apos;s
-              timeline. The findings become prototypes that I design and
-              code myself, using AI tools such as Claude Code to research
-              and build faster.
+              I like to understand the real problem before I design,
+              through analytics, interviews, and user testing. From there,
+              I turn ideas into interactive prototypes, often built in code
+              with AI tools such as Claude Code, so the team and users can
+              try them early.
             </p>
             <p className="mt-4">
-              My experience is in B2B SaaS, marketplaces, and web &amp;
-              mobile products with complex workflows, where I care most
-              about making complicated things feel simple enough to act on
-              with confidence.
+              I have worked on B2B SaaS, marketplaces, and web and mobile
+              products with complex workflows, and what I care about most
+              is giving complex information a clear structure that people
+              can act on with confidence.
             </p>
             <div className="mt-6">
               <p className="text-eyebrow mb-3">Get in touch</p>
