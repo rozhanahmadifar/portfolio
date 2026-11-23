@@ -26,7 +26,7 @@ export const projects: Project[] = [
     title: "Grant Eligibility Form",
     subtitle: "Grantia",
     description:
-      "Over three months, only 37% of people who started Grantia's grant eligibility form submitted it. Most gave up at the last step, which asked for company details many applicants don't have. Another product designer and I researched the problem and redesigned the flow around four types of applicants, and I built it as a working prototype in code.",
+      "Over three months, only 37% of people who started Grantia's grant eligibility form submitted it. Most gave up at the last step, which asked for company details many applicants don't have. Another product designer and I researched the problem and redesigned the flow around four types of applicants. I then turned the new flow into a working prototype with Claude Code.",
     resultLine: "Goal: raise completion from 37% to 50% after launch",
     eyebrow: "Internship · B2B SaaS · Ongoing",
     tags: ["Product Discovery", "Analytics", "AI-assisted Prototyping"],
